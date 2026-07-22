@@ -1,6 +1,13 @@
 // Featured projects dataset
 const projects = [
   {
+    title: "DocuMind AI",
+    desc: "Enterprise RAG platform performing document vector chunking, semantic similarity search, and Q&A with page attribution.",
+    tech: ["Python", "LangChain", "ChromaDB", "FastAPI"],
+    icon: "🧠",
+    github: "https://github.com/ratovoarisoaricardo/documind-ai"
+  },
+  {
     title: "BrandPulse AI",
     desc: "Sentiment analysis platform classifying Twitter data using TF-IDF and Bi-Directional LSTM.",
     tech: ["Python", "TensorFlow", "Streamlit", "NLP"],
