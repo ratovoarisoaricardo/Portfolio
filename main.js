@@ -5,21 +5,21 @@ const projects = [
     desc: "Autonomous Multi-Agent Swarm platform where specialized AI agents (Researcher, Analyst, Writer) collaborate to solve goals.",
     tech: ["Python", "LangChain", "Multi-Agent Systems", "Streamlit"],
     icon: "🤖",
-    github: "https://github.com/ratovoarisoaricardo/agentcraft-ai"
+    github: "https://github.com/ratovoarisoaricardo/Agentcraft"
   },
   {
     title: "DocuMind AI",
     desc: "Enterprise RAG platform performing document vector chunking, semantic similarity search, and Q&A with page attribution.",
     tech: ["Python", "LangChain", "ChromaDB", "FastAPI"],
     icon: "🧠",
-    github: "https://github.com/ratovoarisoaricardo/documind-ai"
+    github: "https://github.com/ratovoarisoaricardo/Documind"
   },
   {
     title: "PulseGrid AI",
     desc: "High-frequency real-time streaming analytics & ML anomaly detection engine with WebSockets & Redis caching.",
     tech: ["FastAPI", "WebSockets", "Redis", "Scikit-Learn"],
     icon: "⚡",
-    github: "https://github.com/ratovoarisoaricardo/pulsegrid-ai"
+    github: "https://github.com/ratovoarisoaricardo/Pulsegrid"
   },
   {
     title: "BrandPulse AI",
