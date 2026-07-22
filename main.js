@@ -8,6 +8,13 @@ const projects = [
     github: "https://github.com/ratovoarisoaricardo/documind-ai"
   },
   {
+    title: "PulseGrid AI",
+    desc: "High-frequency real-time streaming analytics & ML anomaly detection engine with WebSockets & Redis caching.",
+    tech: ["FastAPI", "WebSockets", "Redis", "Scikit-Learn"],
+    icon: "⚡",
+    github: "https://github.com/ratovoarisoaricardo/pulsegrid-ai"
+  },
+  {
     title: "BrandPulse AI",
     desc: "Sentiment analysis platform classifying Twitter data using TF-IDF and Bi-Directional LSTM.",
     tech: ["Python", "TensorFlow", "Streamlit", "NLP"],
