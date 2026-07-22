@@ -1,6 +1,13 @@
 // Featured projects dataset
 const projects = [
   {
+    title: "AgentCraft AI",
+    desc: "Autonomous Multi-Agent Swarm platform where specialized AI agents (Researcher, Analyst, Writer) collaborate to solve goals.",
+    tech: ["Python", "LangChain", "Multi-Agent Systems", "Streamlit"],
+    icon: "🤖",
+    github: "https://github.com/ratovoarisoaricardo/agentcraft-ai"
+  },
+  {
     title: "DocuMind AI",
     desc: "Enterprise RAG platform performing document vector chunking, semantic similarity search, and Q&A with page attribution.",
     tech: ["Python", "LangChain", "ChromaDB", "FastAPI"],
