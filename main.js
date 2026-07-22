@@ -1,3 +1,4 @@
+// Featured projects dataset
 const projects = [
   {
     title: "BrandPulse AI",
@@ -50,11 +51,12 @@ const projects = [
   }
 ];
 
+// Render project cards to the DOM
 function renderProjects() {
   const projectsGrid = document.getElementById('projects-grid');
   if (!projectsGrid) return;
   
-  projectsGrid.innerHTML = ''; // Reset
+  projectsGrid.innerHTML = '';
 
   projects.forEach((project) => {
     const card = document.createElement('div');
@@ -74,7 +76,7 @@ function renderProjects() {
       </div>
     `;
     
-    // Add cool hover effect logic
+    // Mouse spotlight interaction
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left;
@@ -87,6 +89,7 @@ function renderProjects() {
   });
 }
 
+// Lifecycle initialization
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', renderProjects);
 } else {

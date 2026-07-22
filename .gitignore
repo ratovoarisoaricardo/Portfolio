@@ -1,0 +1,10 @@
+# Dependencies
+node_modules/
+.DS_Store
+dist/
+*.log
+
+# Build & Local Scripts
+sync_portfolio.bat
+.env
+.env.local

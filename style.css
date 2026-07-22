@@ -1,3 +1,4 @@
+/* Theme Variables */
 :root {
   --bg-dark: #0a0a0f;
   --bg-card: rgba(255, 255, 255, 0.03);
@@ -9,6 +10,7 @@
   --border: rgba(255, 255, 255, 0.08);
 }
 
+/* Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -24,7 +26,7 @@ body {
   line-height: 1.6;
 }
 
-/* Background Blobs for Modern Aesthetic */
+/* Background Blobs */
 .blob {
   position: absolute;
   border-radius: 50%;
@@ -56,7 +58,7 @@ body {
   100% { transform: translate(50px, 50px) scale(1.1); }
 }
 
-/* Navbar */
+/* Navigation Bar */
 .navbar {
   position: fixed;
   top: 0;
@@ -359,7 +361,7 @@ body {
   color: #a855f7;
 }
 
-/* Contact */
+/* Contact Section */
 .contact-section {
   padding: 100px 20px;
   max-width: 800px;
@@ -391,7 +393,7 @@ footer {
   margin-top: 50px;
 }
 
-/* Responsive */
+/* Mobile Responsive Adjustments */
 @media (max-width: 768px) {
   .title { font-size: 3rem; }
   .nav-links { display: none; }
