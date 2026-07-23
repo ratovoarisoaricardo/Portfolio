@@ -1,30 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio | RATOVOARISOA Mendrika Manjaka Ricardo - AI & Full-Stack Developer</title>
+  <title>Portfolio | RATOVOARISOA Mendrika Manjaka Ricardo - Développeur IA & Full-Stack</title>
+  <meta name="description" content="Portfolio de Ricardo RATOVOARISOA - Développeur IA & Full-Stack spécialisé en agents autonomes, RAG, vision par ordinateur et applications web modernes." />
+  <meta name="theme-color" content="#8a2be2" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="manifest" href="./manifest.json" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-  <!-- Ambient background animation -->
+  <!-- Neural Canvas Background -->
+  <canvas id="neural-canvas"></canvas>
+
+  <!-- Ambient background glow blobs -->
   <div class="blob blob-1"></div>
   <div class="blob blob-2"></div>
   
   <!-- Navigation Header -->
   <nav class="navbar">
     <div class="nav-content">
-      <h1 class="logo"><a href="#" style="text-decoration: none; color: inherit;">Ricardo<span>.AI</span></a></h1>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="https://github.com/ratovoarisoaricardo" target="_blank" rel="noopener noreferrer" style="color: var(--secondary);">GitHub ↗</a></li>
+      <h1 class="logo">
+        <a href="#" style="text-decoration: none; color: inherit;">Ricardo<span>.AI</span></a>
+      </h1>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" data-i18n="nav.about">À Propos</a></li>
+        <li><a href="#projects" data-i18n="nav.projects">Projets</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        <li><a href="https://github.com/ratovoarisoaricardo" target="_blank" rel="noopener noreferrer" class="github-link">GitHub ↗</a></li>
       </ul>
+      <div class="nav-actions">
+        <!-- Language Switcher Button -->
+        <button id="lang-toggle" class="lang-toggle-btn" aria-label="Changer de langue">
+          <span class="flag-icon">🇬🇧</span> <span class="lang-code">EN</span>
+        </button>
+        <!-- Mobile Menu Hamburger Button -->
+        <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -32,11 +52,35 @@
     <!-- Hero Section -->
     <section id="hero" class="hero">
       <div class="hero-content">
-        <h2 class="title">Crafting <span>Intelligent</span> Experiences</h2>
-        <p class="subtitle">AI & Full-Stack Developer passionate about innovation, modern design, and Artificial Intelligence.</p>
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          <span data-i18n="hero.badge">Développeur IA & Full-Stack</span>
+        </div>
+        <h2 class="title" data-i18n="hero.title">Créateur d'Expériences <span class="gradient-text">Intelligentes</span></h2>
+        <p class="subtitle">
+          <span id="typewriter"></span><span class="typewriter-cursor">|</span>
+        </p>
         <div class="hero-buttons">
-          <a href="#projects" class="btn btn-primary">View my projects</a>
-          <a href="#contact" class="btn btn-secondary">Contact me</a>
+          <a href="#projects" class="btn btn-primary" data-i18n="hero.btnProjects">Voir mes projets</a>
+          <a href="#contact" class="btn btn-secondary" data-i18n="hero.btnContact">Me contacter</a>
+        </div>
+
+        <!-- Hero Stats Bar -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">10+</span>
+            <span class="stat-label" data-i18n="stats.projects">Projets Majeurs</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">Multi-Agent</span>
+            <span class="stat-label" data-i18n="stats.agents">Essaims Autonomes</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">RAG & Vision</span>
+            <span class="stat-label" data-i18n="stats.ai">Architectures IA</span>
+          </div>
         </div>
       </div>
     </section>
@@ -45,40 +89,40 @@
     <section id="about" class="about-section">
       <div class="glass-card about-card">
         <div class="about-content">
-          <h2>About Me</h2>
-          <p class="about-bio">
-            Hello! I am <strong>RATOVOARISOA Mendrika Manjaka Ricardo</strong>, an <strong>AI & Full-Stack Developer</strong> passionate about designing and building intelligent, high-performance web applications and machine learning solutions.
+          <h2 data-i18n="about.title">À Propos de Moi</h2>
+          <p class="about-bio" data-i18n="about.p1">
+            Bonjour ! Je suis <strong>RATOVOARISOA Mendrika Manjaka Ricardo</strong>, un <strong>Développeur IA & Full-Stack</strong> passionné par la conception et le développement d'applications web intelligentes à forte valeur ajoutée, de systèmes multi-agents et de solutions de Machine Learning modernes.
           </p>
-          <p class="about-bio">
-            From autonomous multi-agent systems and enterprise RAG platforms to real-time WebSocket streaming analytics and YOLOv5 computer vision, I focus on turning complex technologies into clean, modern, high-impact applications.
+          <p class="about-bio" data-i18n="about.p2">
+            Des systèmes multi-agents autonomes aux plateformes RAG d'entreprise, en passant par l'analyse de flux en temps réel via WebSockets et la vision par ordinateur avec YOLOv5, je m'efforce d'allier rigueur algorithmique, performance backend et interfaces utilisateurs élégantes.
           </p>
 
           <div class="skills-highlight">
-            <h3>Key Skills, Tools & Technologies</h3>
+            <h3 data-i18n="about.skillsTitle">Compétences & Technologies Clés</h3>
             <div class="skills-grid">
               <div class="skill-category">
-                <h4>🤖 Autonomous Agents & GenAI</h4>
-                <p>Multi-Agent Swarms, Agentic Workflows, LangChain, Role Delegation Systems</p>
+                <h4>🤖 Agents Autonomes & GenAI</h4>
+                <p>Multi-Agent Swarms, Agentic Workflows, LangChain, Role Delegation, Gemini/OpenAI APIs</p>
               </div>
               <div class="skill-category">
-                <h4>🧠 RAG & Vector Databases</h4>
-                <p>ChromaDB, Semantic Similarity Search, Vector Embeddings, Chunking Engine</p>
+                <h4>🧠 RAG & Bases Vectorielles</h4>
+                <p>ChromaDB, Recherche Sémantique, Embeddings Vectoriels, Chunking Engine, Citations</p>
               </div>
               <div class="skill-category">
-                <h4>⚡ Real-Time Streaming & Infrastructure</h4>
-                <p>WebSockets, Redis Caching, FastAPI, Asynchronous Pipelines, Docker</p>
+                <h4>⚡ Flux Temps Réel & Infrastructures</h4>
+                <p>WebSockets, Cache Redis, FastAPI, Pipelines Asynchrones, Docker, REST APIs</p>
               </div>
               <div class="skill-category">
                 <h4>📊 Machine Learning & NLP</h4>
-                <p>Python, PyTorch, TensorFlow, Bi-LSTM, Scikit-Learn, Pandas</p>
+                <p>Python, PyTorch, TensorFlow, Bi-LSTM, Scikit-Learn, Pandas, TF-IDF</p>
               </div>
               <div class="skill-category">
-                <h4>👁️ Computer Vision</h4>
-                <p>YOLOv5, OpenCV, Real-time Object Tracking, Video Streams</p>
+                <h4>👁️ Vision par Ordinateur</h4>
+                <p>YOLOv5, OpenCV, Suivi d'Objets Temps Réel, Traitement de Flux Vidéo</p>
               </div>
               <div class="skill-category">
                 <h4>🌐 Full-Stack & DevOps</h4>
-                <p>JavaScript, Node.js, Express, Vite, Streamlit, Flask, Git, Vercel</p>
+                <p>JavaScript (ES6+), Node.js, Express, Vite, React, Streamlit, Flask, Git, Vercel</p>
               </div>
             </div>
           </div>
@@ -89,31 +133,54 @@
     <!-- Projects Section -->
     <section id="projects" class="projects-section">
       <div class="section-header">
-        <h2>Featured Projects</h2>
-        <p>A selection of my AI, Web, and Mobile projects.</p>
+        <h2 data-i18n="projects.title">Projets Réalisés</h2>
+        <p data-i18n="projects.subtitle">Une sélection de mes projets en IA, Vision par Ordinateur et Développement Web.</p>
       </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="project-filters" id="project-filters">
+        <button class="filter-btn active" data-filter="all" data-i18n="filter.all">✨ Tous les Projets</button>
+        <button class="filter-btn" data-filter="ai" data-i18n="filter.ai">🤖 Agents & IA</button>
+        <button class="filter-btn" data-filter="vision" data-i18n="filter.vision">👁️ ML & Vision</button>
+        <button class="filter-btn" data-filter="fullstack" data-i18n="filter.fullstack">🌐 Full-Stack & Web</button>
+      </div>
+
+      <!-- Projects Grid -->
       <div class="projects-grid" id="projects-grid">
-        <!-- Dynamic project cards -->
+        <!-- Dynamic project cards rendered by main.js -->
       </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
       <div class="glass-card contact-card">
-        <h2>Ready to collaborate?</h2>
-        <p>I am always open to new projects and technological challenges. Feel free to contact me!</p>
-        <div class="contact-links" style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 25px;">
-          <a href="mailto:ratovoarisoaricardo@gmail.com" class="btn btn-primary">✉️ Email</a>
-          <a href="https://wa.me/261324527832" target="_blank" class="btn btn-primary" style="background: #25D366; box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);">💬 WhatsApp</a>
-          <a href="tel:+918141165604" class="btn btn-secondary">📞 +91 81411 65604</a>
+        <h2 data-i18n="contact.title">Prêt à collaborer ?</h2>
+        <p data-i18n="contact.subtitle">Je suis toujours ouvert à de nouveaux projets, opportunités et défis technologiques. N'hésitez pas à me contacter !</p>
+        
+        <div class="contact-buttons">
+          <a href="mailto:ratovoarisoaricardo@gmail.com" class="btn btn-primary" data-i18n="contact.emailDirect">✉️ Email Direct</a>
+          <button id="copy-email-btn" class="btn btn-secondary" data-i18n="contact.copyEmail">📋 Copier l'Email</button>
+          <a href="https://wa.me/261324527832" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">💬 WhatsApp (+261)</a>
+          <a href="tel:+918141165604" class="btn btn-secondary">📞 (+91) 81411 65604</a>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Project Details Modal -->
+  <div id="project-modal" class="modal-overlay" aria-hidden="true">
+    <div class="glass-card modal-card">
+      <button class="modal-close" id="modal-close" aria-label="Fermer la fenêtre">&times;</button>
+      <div id="modal-content-body"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
   <!-- Footer -->
   <footer>
-    <p>© 2026 Ricardo Ratovoarisoa. All rights reserved. Built with passion.</p>
+    <p data-i18n="footer.copyright">© 2026 Ricardo RATOVOARISOA. Tous droits réservés. Conçu avec passion.</p>
   </footer>
 
   <script type="module" src="./main.js"></script>
