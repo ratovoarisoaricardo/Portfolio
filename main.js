@@ -90,6 +90,58 @@ const typewriterPhrases = {
 // --- Featured Projects Dataset ---
 const projects = [
   {
+    id: "autoops",
+    category: "fullstack",
+    title: "AutoOps AI Suite",
+    desc: {
+      fr: "Plateforme d'administration système, cartographie de topologie réseau sous-réseau et gestionnaire de règles de pare-feu avec copilote terminal SSH.",
+      en: "SysAdmin & NetOps platform featuring server telemetry, automated log diagnostics, subnet topology mapping, and firewall rules control."
+    },
+    tech: ["Python", "FastAPI", "JavaScript", "Docker", "WebSockets"],
+    icon: "⚡",
+    github: "https://github.com/ratovoarisoaricardo/AutoOpsAI",
+    features: {
+      fr: [
+        "Télémétrie serveur en direct (CPU, RAM, Disque, Processus, Bande passante)",
+        "Analyseur de logs système (syslog) avec suggestions de remédiation par IA",
+        "Cartographie dynamique de topologie réseau sous-réseau avec scanner de ports",
+        "Terminal web SSH interactif et gestionnaire de règles de pare-feu NetShield"
+      ],
+      en: [
+        "Live server telemetry (CPU, RAM, Disk, PIDs, Network Bandwidth)",
+        "System log parser with AI remediation suggestions",
+        "Subnet network topology discovery graph & port scanner",
+        "Interactive SSH Web Terminal & NetShield Firewall Rule Manager"
+      ]
+    }
+  },
+  {
+    id: "visionguard",
+    category: "vision",
+    title: "VisionGuard AI Mobile",
+    desc: {
+      fr: "Application mobile de vision par ordinateur en temps réel proposant la détection de somnolence du conducteur, le suivi d'objets à 60 FPS et des alertes d'intrusion.",
+      en: "Mobile computer vision & surveillance app featuring driver drowsiness detection, 60 FPS object tracking, and acoustic hazard alerts."
+    },
+    tech: ["JavaScript", "HTML5", "CSS3", "PWA", "YOLOv8", "OpenCV"],
+    icon: "📱",
+    github: "https://github.com/ratovoarisoaricardo/visionguard-ai",
+    features: {
+      fr: [
+        "Surveillance anti-somnolence du conducteur (suivi du regard et alertes sonores)",
+        "Suivi d'objets et de véhicules en temps réel à 60 images par seconde",
+        "Protection de périmètre et capture d'écran automatique d'intrusions",
+        "Progressive Web App (PWA) installable sur iOS et Android"
+      ],
+      en: [
+        "Driver drowsiness & eye closure tracking with acoustic alarm alerts",
+        "60 FPS real-time vehicle and pedestrian object tracking",
+        "Perimeter security guard mode with instant snapshot logger",
+        "Standalone Progressive Web App (PWA) installable on iOS & Android"
+      ]
+    }
+  },
+  {
     id: "agentcraft",
     category: "ai",
     title: "AgentCraft AI",
