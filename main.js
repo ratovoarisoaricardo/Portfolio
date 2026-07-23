@@ -125,7 +125,7 @@ const projects = [
     },
     tech: ["JavaScript", "HTML5", "CSS3", "PWA", "YOLOv8", "OpenCV"],
     icon: "📱",
-    github: "https://github.com/ratovoarisoaricardo/visionguard-ai",
+    github: "https://github.com/ratovoarisoaricardo/VisionGuard-AI-Mobile",
     features: {
       fr: [
         "Surveillance anti-somnolence du conducteur (suivi du regard et alertes sonores)",
