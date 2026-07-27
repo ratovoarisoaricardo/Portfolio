@@ -74,12 +74,14 @@ let currentLang = localStorage.getItem('portfolio_lang') || 'fr';
 // --- Typewriter Phrases ---
 const typewriterPhrases = {
   fr: [
+    "Surveillance Réseau & Infrastructures Temps Réel",
     "Spécialiste Essaims d'Agents IA Autonomes",
     "Architecte RAG & Recherche Vectorielle",
     "Analyse de Flux Temps Réel & WebSockets",
     "Vision par Ordinateur YOLOv5 & Deep Learning"
   ],
   en: [
+    "Real-Time Network Monitoring & Telemetry",
     "Autonomous AI Agent Swarms Specialist",
     "Enterprise RAG & Vector Search Architect",
     "Real-Time Streaming Analytics & WebSockets",
@@ -112,6 +114,32 @@ const projects = [
         "Streaming SVG RTT latency trend charts & 30s sparklines",
         "Network incident simulator (server outage, high RTT spike, packet loss)",
         "Public status page featuring 90-day interactive SLA calendar"
+      ]
+    }
+  },
+  {
+    id: "apex-vpn",
+    category: "fullstack",
+    title: "ApexVPN Desktop",
+    desc: {
+      fr: "Client VPN haute sécurité offrant la sélection de relais mondiaux, le routage virtuel chiffré, le contrôle du Kill Switch et le test de latence de serveurs.",
+      en: "Desktop VPN client featuring global relay server selection, encrypted virtual routing, Kill Switch control, and server latency benchmark."
+    },
+    tech: ["React 18", "Node.js", "Vite", "Virtual Network", "Security"],
+    icon: "🛡️",
+    github: "https://github.com/ratovoarisoaricardo",
+    features: {
+      fr: [
+        "Sélection et mesure de ping en direct de serveurs relais mondiaux",
+        "Tunneling chiffré et protection contre les fuites DNS / IP",
+        "Mécanisme d'urgence Kill Switch automatique",
+        "Interface sombre moderne avec statistiques de trafic en direct"
+      ],
+      en: [
+        "Global relay server selection & live ping benchmarking",
+        "Encrypted tunneling & DNS/IP leak protection",
+        "Automated Kill Switch emergency internet disconnect",
+        "Modern dark UI with live bandwidth telemetry"
       ]
     }
   },
