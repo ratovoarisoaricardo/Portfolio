@@ -90,6 +90,32 @@ const typewriterPhrases = {
 // --- Featured Projects Dataset ---
 const projects = [
   {
+    id: "netpulse",
+    category: "fullstack",
+    title: "NetPulse Monitoring System",
+    desc: {
+      fr: "Plateforme de surveillance réseau hybride en temps réel (ICMP & HTTP) avec télémétrie RTT live, simulateur d'incidents, graphiques SVG streaming et page de statut 90 jours.",
+      en: "Hybrid real-time network monitoring platform (ICMP & HTTP) featuring live RTT telemetry, incident simulator, streaming SVG charts, and 90-day public status page."
+    },
+    tech: ["React 18", "Node.js", "ICMP Sockets", "Vite", "SVG Charts", "REST API"],
+    icon: "🌐",
+    github: "https://github.com/ratovoarisoaricardo/Netpulse",
+    features: {
+      fr: [
+        "Sondages ICMP & HTTP réels via un agent léger Node.js zéro dépendance",
+        "Graphiques de tendance de latence (RTT) et sparklines SVG temps réel",
+        "Simulateur de pannes réseau (surcharge, coupure serveur, perte de paquets)",
+        "Page de statut publique avec calendrier de disponibilité sur 90 jours"
+      ],
+      en: [
+        "Real system ICMP & HTTP probes via lightweight zero-dependency Node agent",
+        "Streaming SVG RTT latency trend charts & 30s sparklines",
+        "Network incident simulator (server outage, high RTT spike, packet loss)",
+        "Public status page featuring 90-day interactive SLA calendar"
+      ]
+    }
+  },
+  {
     id: "autoops",
     category: "fullstack",
     title: "AutoOps AI Suite",
