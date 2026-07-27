@@ -118,6 +118,32 @@ const projects = [
     }
   },
   {
+    id: "netmap-topology",
+    category: "fullstack",
+    title: "NetMap Topology Visualizer",
+    desc: {
+      fr: "Visualiseur de topologie et cartographie réseau 2D interactive avec animation des flux de paquets, inspecteur d'équipement et simulation de pannes en cascade.",
+      en: "Interactive 2D network topology visualizer & mapping tool featuring live packet flow animations, equipment inspector drawer, and cascading failure simulator."
+    },
+    tech: ["React 18", "SVG Canvas", "Node.js", "Vite", "Network Topology", "CSS3"],
+    icon: "🕸️",
+    github: "https://github.com/ratovoarisoaricardo/Net-Topology-Visualizer",
+    features: {
+      fr: [
+        "Cartographie réseau 2D avec glisser-déplacer (Drag & Drop) des nœuds",
+        "Animation de particules lumineuses circulant le long des câbles d'interconnexion",
+        "Tiroir d'inspection d'équipement (IP/MAC, CPU/RAM, ports écouteurs :22, :80, :443)",
+        "Simulateur de pannes en cascade et 3 architectures réseau préréglées"
+      ],
+      en: [
+        "Interactive 2D network canvas with drag-and-drop node positioning",
+        "Glow particle animation streaming along active link interconnects",
+        "Equipment inspector drawer (IP/MAC, CPU/RAM meters, listening ports)",
+        "Cascading failure simulator & 3 pre-configured network architecture presets"
+      ]
+    }
+  },
+  {
     id: "apex-vpn",
     category: "fullstack",
     title: "ApexVPN Desktop",
